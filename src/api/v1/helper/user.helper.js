@@ -16,8 +16,9 @@ exports.getAllUser = async (bodyData) => {
     try {
         const userList = await userModel.find();
         // console.log(userList);
-        return userList[0] ? { status: true, message: "user added ", data:userList } : { status: false, message: "no user found user", data: {} }
+        return userList[0] ? { status: true, message: "user added ", data: userList } : { status: false, message: "no user found", data: {} }
     } catch (error) {
+        console.log(error);
         return { status: false, message: error.message, data: {} }
     }
 }

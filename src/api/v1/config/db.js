@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false)                 
 
 const db = mongoose.connect('mongodb+srv://12345:12345@cluster0.b9h43w1.mongodb.net/?retryWrites=true&w=majority', (err) => {
     if (!err) {
@@ -9,4 +10,4 @@ const db = mongoose.connect('mongodb+srv://12345:12345@cluster0.b9h43w1.mongodb.
 }
 )
 
-module.exports = {db}
+module.exports = {db}  

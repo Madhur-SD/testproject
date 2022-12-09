@@ -5,7 +5,7 @@ exports.addNewUser = async (req, res) => {
         const { status, message, data } = await addUser(req.body);
         return status ? res.send({ status, subCode: 200, message }) : res.send({ status, subCode: 400, message })
     } catch (error) {
-        return ({ status:false, subCode: 200, message:error.message })
+        return ({ status:false, subCode: 400, message:error.message })
     }
 }
 
@@ -14,6 +14,6 @@ exports.getAllUserList = async (req, res) => {
         const { status, message, data } = await getAllUser();
         return status ? res.send({ status, subCode: 200, message , data}) : res.send({ status, subCode: 400, message })
     } catch (error) {
-        return ({ status: false, subCode: 200, message: error.message })
+        return ({ status: false, subCode: 400, message: error.message })
     }
 }
