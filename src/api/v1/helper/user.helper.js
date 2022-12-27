@@ -2,8 +2,8 @@ const { userModel } = require("../model/user.model");
 
 exports.addUser = async (bodyData) => {
     try {
-        const { fullName, username, plans, status, } = bodyData
-        let data = { fullName, username, plans, status }
+        const { username, email,  password, number } = bodyData
+        let data = { username, email, password, number }
         const saveData = new userModel(data);
         await saveData.save()
         return { status: true, message: "user added ", data: {} }
