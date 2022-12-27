@@ -36,9 +36,9 @@ let credentials = { key: privateKey, cert: certificate };
 const server = http.createServer(app);
 const secureServer = https.createServer(credentials, app)
 
-secureServer.listen(10009, () => {
-    console.log(`listening at 10009`);
+secureServer.listen(5051, () => {
+    console.log(`listening at 5051`);
 })
-server.listen(10000, () => {
-    console.log("server running on 10000");
+server.listen(5000, () => {
+    console.log("server running on 5000");
 })
