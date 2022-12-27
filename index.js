@@ -37,8 +37,8 @@ const server = http.createServer(app);
 const secureServer = https.createServer(credentials, app)
 
 secureServer.listen(3009, () => {
-    console.log(`listening at 3009`);
+    console.log(`listening at 10009`);
 })
 server.listen(8000, () => {
-    console.log("server running on 8000");
+    console.log("server running on 10000");
 })
